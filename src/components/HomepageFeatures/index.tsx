@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Balm is used by 20+ mods with millions of users with frequent updates to new Minecraft versions.
+        Balm is used by 20+ mods with millions of users and frequent updates to new Minecraft versions.
       </>
     ),
   },

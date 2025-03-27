@@ -66,6 +66,7 @@ const config: Config = {
 
   themeConfig: {
     // image: 'img/docusaurus-social-card.jpg',
+    respectPrefersColorScheme: true,
     navbar: {
       title: 'Balm',
       logo: {
