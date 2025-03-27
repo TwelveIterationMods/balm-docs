@@ -47,7 +47,9 @@ The mod templates above already come with a gradle setup that covers all of this
 
 #### Add Balm to your Common Project
 
-This example incluedes Kuma too, which is a library embedded in Balm to allow for easier registration of key bindings with modifiers (CTRL/SHIFT/...).
+:::info
+This example includes Kuma too, which is a library embedded in Balm to allow for easier registration of key bindings with support for key modifiers and conflict contexts.
+:::
 
 ```groovy
 implementation("net.blay09.mods:kuma-api-common:${kuma_version}")
