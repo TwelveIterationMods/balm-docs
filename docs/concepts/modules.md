@@ -1,7 +1,7 @@
 # Modules
 
 :::info[Minecraft 1.21.5+ only]
-Modules are available starting in Minecraft 1.21.5. See [Entrypoints](../entrypoints.md) for how to initialize your mod on older versions.
+Modules are available starting in Minecraft 1.21.5. See [Entrypoints](./entrypoints.md) for how to initialize your mod on older versions.
 :::
 
 ## Overview
