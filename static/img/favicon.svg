@@ -1,0 +1,62 @@
+<svg viewBox="90 75 320 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop style="stop-color: rgb(255, 255, 255);" offset="0.242"></stop>
+      <stop style="" offset="1"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-2" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(255, 0, 0);"></stop>
+      <stop offset="0.246" style="stop-color: rgb(71, 129, 63);"></stop>
+      <stop offset="0.5" style="stop-color: rgb(63, 169, 0);"></stop>
+      <stop offset="0.749" style="stop-color: rgb(93, 190, 154);"></stop>
+      <stop offset="1" style="stop-color: rgb(190, 0, 255);"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" x1="250" y1="83.931" x2="250" y2="416.069" gradientTransform="matrix(0.999998, 0.002011, -0.002007, 0.997993, 0.835534, 0.332204)" xlink:href="#gradient-1"></linearGradient>
+    <linearGradient id="gradient-2-0" gradientUnits="userSpaceOnUse" x1="250" y1="83.931" x2="250" y2="416.069" gradientTransform="matrix(0.009753, -0.999952, 0.885008, 0.008629, 24.64291, 418.512168)" xlink:href="#gradient-2"></linearGradient>
+    <linearGradient id="gradient-0" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(197, 222, 45);"></stop>
+      <stop offset="1" style="stop-color: rgb(122, 123, 152);"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-0-0" gradientUnits="userSpaceOnUse" x1="174.4" y1="208.591" x2="174.4" y2="416.213" gradientTransform="matrix(0.869127, -0.494588, 0.564797, 0.992503, -135.459077, 88.857798)" xlink:href="#gradient-0"></linearGradient>
+    <linearGradient id="gradient-0-1" gradientUnits="userSpaceOnUse" x1="138.1" y1="187.4" x2="138.1" y2="316.868" gradientTransform="matrix(0.999968, 0.008047, -0.008016, 0.995992, 32.119809, 0.158549)" xlink:href="#gradient-0"></linearGradient>
+    <linearGradient id="gradient-3" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(255, 255, 255);"></stop>
+      <stop offset="1" style="stop-color: rgb(0, 77, 161);"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-4">
+      <stop style="stop-color: rgb(255, 255, 255);" offset="0"></stop>
+      <stop style="stop-color: rgb(71, 85, 181);" offset="1"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-3-0" gradientUnits="userSpaceOnUse" x1="349.664" y1="219.943" x2="349.664" y2="427.565" gradientTransform="matrix(-0.871743, -0.489963, 0.563779, -1.003073, 464.645504, 808.023482)" xlink:href="#gradient-3"></linearGradient>
+    <linearGradient id="gradient-3-1" gradientUnits="userSpaceOnUse" x1="227.683" y1="265.564" x2="227.683" y2="395.032" gradientTransform="matrix(-0.999991, 0.00444, -0.004451, -1.002684, 483.626515, 658.743266)" xlink:href="#gradient-3"></linearGradient>
+    <linearGradient id="gradient-4-0" gradientUnits="userSpaceOnUse" x1="199.507" y1="139.213" x2="199.507" y2="364.5" gradientTransform="matrix(0.76382, 0.645429, -0.419563, 0.496525, 155.367106, -56.385724)" xlink:href="#gradient-4"></linearGradient>
+    <linearGradient id="gradient-4-1" gradientUnits="userSpaceOnUse" x1="299.605" y1="139.2" x2="299.605" y2="364.487" gradientTransform="matrix(0.774727, -0.632297, 0.409392, 0.50161, -37.614479, 258.815139)" xlink:href="#gradient-4"></linearGradient>
+  </defs>
+  <path d="M 234.961 88.189 Q 250 79.673 265.039 88.189 L 385.351 156.32 Q 400.391 164.837 400.391 181.869 L 400.391 318.131 Q 400.391 335.164 385.351 343.68 L 265.039 411.811 Q 250 420.327 234.961 411.811 L 114.649 343.68 Q 99.609 335.164 99.609 318.131 L 99.609 181.869 Q 99.609 164.837 114.649 156.32 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; pointer-events: none; fill: url(#gradient-2-0);" bx:shape="n-gon 250 250 173.656 170.327 6 0.1 1@29ef28a4">
+    <title>Main Hexagon</title>
+  </path>
+  <path d="M 234.961 88.189 Q 250 79.673 265.039 88.189 L 385.351 156.32 Q 400.391 164.837 400.391 181.869 L 400.391 318.131 Q 400.391 335.164 385.351 343.68 L 265.039 411.811 Q 250 420.327 234.961 411.811 L 114.649 343.68 Q 99.609 335.164 99.609 318.131 L 99.609 181.869 Q 99.609 164.837 114.649 156.32 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; mix-blend-mode: multiply; fill: url(#gradient-1-0); pointer-events: none;" bx:shape="n-gon 250 250 173.656 170.327 6 0.1 1@29ef28a4">
+    <title>Vertical Shade</title>
+  </path>
+  <path d="M 251.072 139.213 L 250 364.5 L 147.942 325.616 L 153.883 193.908 L 251.072 139.213 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: url(#gradient-4-0);">
+    <title>Inner Left</title>
+  </path>
+  <path d="M 251.03 139.2 L 349.252 195.9 L 347.02 331.662 L 249.958 364.487 L 251.03 139.2 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: url(#gradient-4-1);">
+    <title>Inner Right</title>
+  </path>
+  <path d="M 250 190.035 L 300.624 220.017 L 300.624 279.983 L 250 309.965 L 199.376 279.983 L 199.376 220.017 Z" style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-opacity: 0; pointer-events: none;" bx:shape="n-gon 250 250 58.456 59.965 6 0 1@36a3f7ad">
+    <title>Inner Cube</title>
+  </path>
+  <path d="M 255.017 395.032 C 225.853 289.87 272.449 254.234 250.066 268.606 C 250.066 268.606 199.438 302.633 199.438 313.988 C 194.143 356.802 236.549 387.687 255.017 395.032 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; transform-origin: 294.776px 291.221px; fill: url(#gradient-3-1); pointer-events: none;" transform="matrix(-1, 0, 0, -1, 0.000009, 0.000009)">
+    <title>Right Inner Flap</title>
+  </path>
+  <path d="M 401.2 208.763 C 401.2 208.763 396.187 207.325 386.161 213.002 L 265.849 281.133 C 255.822 286.81 250.809 295.327 250.809 306.682 C 245.507 349.496 267.294 408.877 285.787 416.222 C 231 322.834 360.132 295.525 401.2 260.313 L 401.2 208.763 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; fill: url(#gradient-3-0); pointer-events: none;" transform="matrix(-1, 0, 0, -1, 0.000049, -0.000014)">
+    <title>Right Flap</title>
+  </path>
+  <path d="M 165.434 187.4 C 136.27 292.562 182.866 328.198 160.483 313.826 C 160.483 313.826 109.855 279.799 109.855 268.444 C 104.56 225.63 146.966 194.745 165.434 187.4 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; transform-origin: 250px 250px; fill: url(#gradient-0-1); pointer-events: none;">
+    <title>Left Inner Flap</title>
+  </path>
+  <path d="M 250 416.05 C 250 416.05 244.987 417.488 234.961 411.811 L 114.649 343.68 C 104.622 338.003 99.609 329.486 99.609 318.131 C 94.307 275.317 116.094 215.936 134.587 208.591 C 79.8 301.979 208.932 329.288 250 364.5 L 250 416.05 Z" style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-opacity: 0; fill: url(#gradient-0-0); pointer-events: none;">
+    <title>Left Flap</title>
+  </path>
+</svg>
