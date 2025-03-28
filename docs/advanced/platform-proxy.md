@@ -50,5 +50,5 @@ if (Balm.getPlatform().equals(LoaderPlatforms.FABRIC)) {
 
 Balm also provides other proxy types:
 
-- Mod Proxies: For mod-specific code (e.g. abstracting away different currency mods)
-- Sided Proxies: For client vs server code (only rarely needed nowadays)
+- [Mod Proxies](./mod-proxy.md): For mod-specific code (e.g. abstracting away different currency mods)
+- [Sided Proxies](./sided-proxy.md): For client vs dedicated server code (only rarely needed nowadays)

@@ -4,51 +4,62 @@ title: Sided Proxies
 
 ## Overview
 
-Platform proxies are a way of abstracting platform-specific code away through a common interface from your common code.
+Sided proxies are a way of safely calling client-only code in a common context.
 
 :::tip
-Most features you would normally need to access are already abstracted through other means using the Balm API, and there is a good chance you do not need to use platform proxies.
-
-They merely exist as a simple way to extend Balm's capabilities for things that are not already natively supported.
+Balm provides its own sided proxy via `Balm.getProxy()` that can be used for the most common use cases, such as getting the local player.
 :::
 
-With platform proxies, you can:
+With sided proxies, you can:
 
-- Define a common interface to abstract loader-specific code into common-accessible code
-- Provide implementations for your interface on each loader subproject individually
-- Have Balm automatically load the appropriate implementation when accessing your proxy
+- Define a common class that provides the default implementation to use (e.g. on servers)
+- Define a client sub-class that provides the implementation to use on clients
+
+:::tip
+Needing a sided proxy is often a sign that something is wrong in the design of your code. Consider refactoring to better separate your client code from your common code instead.
+:::
 
 ## Usage
 
 ```java
-// Define implementations for each platform
-MyInterface instance = Balm.platformProxy()
-    .withFabric("com.example.mymod.fabric.FabricImplementation")
-    .withForge("com.example.mymod.forge.ForgeImplementation") 
-    .withNeoForge("com.example.mymod.neoforge.NeoForgeImplementation")
-    .build();
+MyCommonProxy sidedProxy = Balm.sidedProxy("com.example.mymod.MyCommonProxy","com.example.mymod.client.MyClientProxy").get();
 ```
 
 ## Requirements for Proxy Classes
 
-Implementation classes loaded through the platform proxy system must:
+Proxy classes must
 
-- Implement the interface you're proxying
 - Have a public no-argument constructor
+
+The client proxy class must
+
+- extend the common proxy class
 
 ## Platform Detection
 
-For the rare case where you need to handle some mod logic differently on one platform without needing to access loader-specific code, Balm also provides the current platform through `Balm.getPlatform()` and its supported platforms in the `LoaderPlatforms` class.
+If you have a `Level` available in your context, you should use `level.isClientSide` to determine whether you're acting on the client level or the server level.
+
+:::info
+Note that singleplayer has a server level too, since it is running an integrated server.
+:::
+
+For cases where you need to actually know whether the mod is running on a client or a dedicated server, you can use Balm's proxy to check:
 
 ```java
-if (Balm.getPlatform().equals(LoaderPlatforms.FABRIC)) {
-    // Do something that only happens on Fabric (but obviously, without having access to Fabric APIs since you're in common code)
+if (Balm.getProxy().isClient()) {
+    // Do something that only happens on clients, but not on dedicated servers
 }
 ```
+
+:::warning
+Be careful not to cause any client-only classes to be loaded when you use this pattern!
+
+It is safe to call a static method of a client-only class (as long as it doesn't take any client-only class parameters), but you cannot instantiate or access any instances of client-only classes.
+:::
 
 ### Comparison with Other Proxy Types
 
 Balm also provides other proxy types:
 
-- Mod Proxies: For mod-specific code (e.g. abstracting away different currency mods)
-- Sided Proxies: For client vs server code (only rarely needed nowadays)
+- [Platform Proxies](./platform-proxy.md): For platform-specific code (e.g. NeoForge vs Fabric)
+- [Mod Proxies](./mod-proxy.md): For mod-specific code (e.g. abstracting away different currency mods)

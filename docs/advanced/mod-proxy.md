@@ -91,5 +91,5 @@ Implementation classes loaded through the mod proxy system must:
 
 Balm also provides other proxy types:
 
-- Platform Proxies: For platform-specific code (e.g. NeoForge vs Fabric)
-- Sided Proxies: For client vs server code (only rarely needed nowadays)
+- [Platform Proxies](./platform-proxy.md): For platform-specific code (e.g. NeoForge vs Fabric)
+- [Sided Proxies](./sided-proxy.md): For client vs dedicated server code (only rarely needed nowadays)
