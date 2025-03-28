@@ -85,6 +85,5 @@ Commands.literal("mycommand")
 Balm automatically integrates with:
 
 - `fabric-permissions-api` (third party mod) when it's present on Fabric
-- `PermissionAPI` on NeoForge
-- `PermissionAPI` on Forge
+- `PermissionAPI` on NeoForge and Forge
 - Fallback to your defined default resolvers / vanilla permission levels when no permission handler is installed
