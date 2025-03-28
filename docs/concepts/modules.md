@@ -56,8 +56,6 @@ You can call `Balm.registerModule()` at any time to add an additional module.
 
 Just make sure it's in your initializer if you're registering blocks or other registry items in your module!
 
-`Balm.registerModule()` can also be used in place of `Balm.onRuntimeAvailable()` by third party mods wanting to access Balm classes (such as `Balm.getEvents()`) in a safe manner.
-
 ```java
 Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, () -> {
     Balm.registerModule(new Waystones());

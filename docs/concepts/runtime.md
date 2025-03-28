@@ -32,6 +32,20 @@ If you use the new `BalmModule` class (1.21.5+), you can simply implement the re
 
 See the [modules](./modules.md) documentation for examples.
 
+### Accessing the Balm Runtime safely
+
+Mods (especially third party non-Balm mods integrating with Balm) should take care not to access the Balm runtime outside of the regular mod lifecycle. 
+
+For example, you may run into, or cause problems, if you
+- access Balm services on a mixin that runs before mods are loaded
+- access Balm services in a Fabric entrypoint when running on Forge via Sinytra Connector
+
+To ensure your third party integration code only runs when Balm is ready for it, you can use `Balm.onRuntimeAvailable()`, which takes a `Runnable` that is ran once Balm has loaded.
+
+:::warning
+This only applies to third party mods. Mods that are built on Balm should use `Balm.initializeMod` in their entrypoints as normal.
+:::
+
 ## Behind the Scenes
 
 Balm's runtime is loaded using an Service Provider Interface (SPI), and there is an implementation of it for each supported mod loader.
