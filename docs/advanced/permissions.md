@@ -31,9 +31,9 @@ Permissions are resolved in a specific context, which can be:
 Note that only player contexts are fully supported on all platforms. Most permission systems do not support non-player permissions and will instead fall back to the default resolver you specify when registering your permissions. Additionally, Balm does not support offline player permissions yet.
 :::
 
-### Usage
+## Usage
 
-#### Registering Permissions
+### Registering Permissions
 
 ```java
 // For commands, there is a helper method to register a permission which will use the permission system for players and fall back to the regular Vanilla permission level check for non-players like command blocks.
@@ -49,7 +49,7 @@ Balm.getPermissions().registerPermission(
 );
 ```
 
-#### Checking Permissions
+### Checking Permissions
 
 ```java
 // Check if a player has a permission
@@ -88,29 +88,3 @@ Balm automatically integrates with:
 - `PermissionAPI` on NeoForge
 - `PermissionAPI` on Forge
 - Fallback to your defined default resolvers / vanilla permission levels when no permission handler is installed
-
-### Example
-
-```java
-public class MyCommand {
-    private static final ResourceLocation MY_PERMISSION = 
-        ResourceLocation.fromNamespaceAndPath("mymod", "command.feature");
-
-    public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
-        // Register permission with level 2 access (gamemasters)
-        BalmCommands.registerPermission(MY_PERMISSION, 2);
-
-        dispatcher.register(Commands.literal("mymod")
-            .then(Commands.literal("feature")
-                .requires(BalmCommands.requirePermission(MY_PERMISSION))
-                .executes(context -> {
-                    // Command implementation
-                    context.getSource().sendSuccess(() -> 
-                        Component.literal("Feature executed!"), true);
-                    return 1;
-                })
-            )
-        );
-    }
-}
-```
