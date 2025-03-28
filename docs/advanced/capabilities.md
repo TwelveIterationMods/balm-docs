@@ -122,8 +122,14 @@ Due to the way Forge's capabilities work, it is necessary to create a `Capabilit
 
 This step cannot be automated by Balm because Forge uses a transformer on `CapabilityToken` that needs the generic parameter to be statically defined at compile-time.
 
-```java title="In your Forge entrypoint"
+```java title="In your Forge entrypoint, before registering capabilities"
 final var forgeCapabilities = (ForgeBalmCapabilities) Balm.getCapabilities();
 forgeCapabilities.preRegisterType(id("your_capability"), CapabilityManager.get(new CapabilityToken<YourCapability>() {
 }));
 ```
+
+:::tip
+If you use `BalmModule`, consider registering an additional module in your Forge entrypoint that runs before your common module.
+
+If you use a static intializer, simply make your `preRegisterType` calls before you call `initializeMod`.
+:::
