@@ -4,7 +4,7 @@
 
 In order for your mod to be loaded, you must create a mod-loader specific entrypoint inside each corresponding mod-loader subproject, and register your mod with Balm inside.
 
-If you use the balm-mod template repository, this setup should already be done for you.
+If you use the [balm-mod template repository](https://github.com/TwelveIterationMods/balm-mod), this setup should already be done for you.
 
 If you use [Jared's MultiLoader](https://github.com/jaredlll08/MultiLoader-Template) template, you need to add the calls to `Balm.initializeMod()` so that your mod is registered with Balm.
 
@@ -122,7 +122,7 @@ If you're using BalmClientModule:
 ```java
 public class ForgeWaystonesClient {
     public static void initialize() {
-        Balm.registerModule(new WaystonesClient())
+        Balm.registerModule(new WaystonesClient());
     }
 }
 ```
@@ -144,5 +144,5 @@ Balm.initializeIfLoaded("exnihilosequentia", "net.blay09.mods.excompressum.compa
 ```
 
 :::warning
-Don't use e.g. `ExNihiloSequentiaIntegration.class.getName()` as that will cause the class to be loaded even if the third party mod isn't present, which will lead to a crash if that class accesses any classes from the third party mod.
+Don't use `ExNihiloSequentiaIntegration.class.getName()` as that will cause the class to be loaded even if the third party mod isn't present, which will lead to a crash if that class happens to access any classes from the third party mod.
 :::
