@@ -34,7 +34,7 @@ See the [modules](./modules.md) documentation for examples.
 
 ### Accessing the Balm Runtime safely
 
-Mods (especially third party non-Balm mods integrating with Balm) should take care not to access the Balm runtime outside of the regular mod lifecycle. 
+Third Party Mods, and in some circumstances Balm mods as well, should take care not to access the Balm runtime outside of the regular mod lifecycle. 
 
 For example, you may run into, or cause problems, if you
 - access Balm services on a mixin that runs before mods are loaded
@@ -42,15 +42,20 @@ For example, you may run into, or cause problems, if you
 
 To ensure your third party integration code only runs when Balm is ready for it, you can use `Balm.onRuntimeAvailable()`, which takes a `Runnable` that is ran once Balm has loaded.
 
-:::warning
+:::info
 This only applies to third party mods. Mods that are built on Balm should use `Balm.initializeMod` in their entrypoints as normal.
 :::
 
 ## Behind the Scenes
 
-Balm's runtime is loaded using an Service Provider Interface (SPI), and there is an implementation of it for each supported mod loader.
+Balm's runtime is loaded using a Service Provider Interface (SPI), and there is an implementation of it for each supported mod loader.
+
 Balm defines the class to load for the runtime in a `META-INF/services/` file. That's all!
 
 :::tip
-You can create an SPI using `ServiceLoader` yourself to create platform specific code. But you probably don't need to since you can just use a [Platform Proxy](../advanced/platform-proxy.md) or the existing Balm services. Just thought I'd mention it so you understand that there really isn't any magic involved in Balm at all.
+You can create an SPI using `ServiceLoader` yourself to create platform specific code.
+
+But you probably don't need to since you can just use a [Platform Proxy](../advanced/platform-proxy.md) or the existing Balm services.
+
+Just thought I'd mention it so you understand that there really isn't any magic involved in Balm at all.
 :::
