@@ -15,8 +15,10 @@ With sided proxies, you can:
 - Define a common class that provides the default implementation to use (e.g. on servers)
 - Define a client sub-class that provides the implementation to use on clients
 
-:::tip
-Needing a sided proxy is often a sign that something is wrong in the design of your code. Consider refactoring to better separate your client code from your common code instead.
+:::warning
+Needing a sided proxy is often a sign that something is wrong in the design of your code.
+
+Consider refactoring to better separate your client code from your common code instead.
 :::
 
 ## Usage
@@ -43,10 +45,10 @@ If you have a `Level` available in your context, you should use `level.isClientS
 Note that singleplayer has a server level too, since it is running an integrated server.
 :::
 
-For cases where you need to actually know whether the mod is running on a client or a dedicated server, you can use Balm's proxy to check:
+For cases where you need to actually know whether the mod is running on a client or a dedicated server, you can check the environment:
 
 ```java
-if (Balm.getProxy().isClient()) {
+if (Balm.getEnvironment() == BalmEnvironment.CLIENT) {
     // Do something that only happens on clients, but not on dedicated servers
 }
 ```
