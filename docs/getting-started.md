@@ -89,9 +89,9 @@ dependencies {
 }
 ```
 
-#### Initialize Balm in your Modloader Entrypoints
+#### Initializing your mod with Balm
 
-Call `Balm.initializeMod` with your mod id, the mod-loader specific load context, and a `BalmModule` or static initializer method.
+Call `Balm.initializeMod` with your mod id, the mod-loader specific load context, and a `BalmModule` or static initializer method in each of your mod-loader specific entrypoints.
 
 ```java
 public class FabricTrashSlot implements ModInitializer {
@@ -104,4 +104,3 @@ public class FabricTrashSlot implements ModInitializer {
 
 For more information on this part, check the documentation on [entrypoints](./concepts/entrypoints.md).
 
-#### Initializing your mod with Balm
