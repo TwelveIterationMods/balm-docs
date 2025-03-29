@@ -133,3 +133,9 @@ If you use `BalmModule`, consider registering an additional module in your Forge
 
 If you use a static intializer, simply make your `preRegisterType` calls before you call `initializeMod`.
 :::
+
+## Caveat: Context for Fluid Tanks on older versions
+
+For backwards compatibility, Balm's default capability for fluid tanks (`balm:fluid_tank`) has a context of `Void.class`.
+
+Starting in Minecraft 1.21.5, the context has been changed to `Direction`.
