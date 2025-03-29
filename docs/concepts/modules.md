@@ -1,9 +1,5 @@
 # Modules
 
-:::info[Minecraft 1.21.5+ only]
-Modules are available starting in Minecraft 1.21.5. See [Entrypoints](./entrypoints.md) for how to initialize your mod on older versions.
-:::
-
 ## Overview
 
 Modules are a new method of interacting with Balm in a more structured and organized way.

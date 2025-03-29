@@ -23,7 +23,7 @@ Refer to the [NeoForge documentation](https://docs.neoforged.net/docs/gettingsta
 public class NeoForgeWaystones {
     public NeoForgeWaystones(IEventBus modEventBus) {
         final var context = new NeoForgeLoadContext(modEventBus);
-        // Using a BalmModule (1.21.5+)
+        // Using a BalmModule
         Balm.initializeMod(Waystones.MOD_ID, context, new Waystones());
         // or using a static initializer method
         // Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, Waystones::initialize);
@@ -39,7 +39,7 @@ public class NeoForgeWaystonesClient {
 
     public NeoForgeWaystonesClient(IEventBus modEventBus) {
         final var context = new NeoForgeLoadContext(modEventBus);
-        // Using a BalmClientModule (1.21.5+)
+        // Using a BalmClientModule
         BalmClient.initializeMod(Waystones.MOD_ID, context, new WaystonesClient());
         // or using a static initializer method
         // BalmClient.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, WaystonesClient::initialize);
@@ -67,7 +67,7 @@ You should only need to define a custom `modmenu` entrypoint if you want to prov
 public class FabricWaystones implements ModInitializer {
     @Override
     public void onInitialize() {
-        // Using a BalmModule (1.21.5+)
+        // Using a BalmModule
         Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, new Waystones());
         // or using a static initializer method
         // Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, Waystones::initialize);
@@ -81,7 +81,7 @@ public class FabricWaystones implements ModInitializer {
 public class FabricWaystonesClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        // Using a BalmClientModule (1.21.5+)
+        // Using a BalmClientModule
         BalmClient.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, new WaystonesClient());
         // or using a static initializer method
         // BalmClient.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, WaystonesClient::initialize);
@@ -105,7 +105,7 @@ Also note that Forge uses the `MixinConfigs` manifest attribute to define mixin 
 @Mod(Waystones.MOD_ID)
 public class ForgeWaystones {
     final var loadContext = new ForgeLoadContext(context.getModEventBus());
-    // Using a BalmClientModule (1.21.5+)
+    // Using a BalmClientModule
     Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, new Waystones());
     // or using a static initializer method
     // Balm.initialize(Waystones.MOD_ID, loadContext, Waystones::initialize);

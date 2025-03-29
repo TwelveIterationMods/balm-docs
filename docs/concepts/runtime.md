@@ -28,7 +28,7 @@ Alternatively, you can use [modules](./modules.md) so you don't have to care abo
 
 ### Using modules
 
-If you use the new `BalmModule` class (1.21.5+), you can simply implement the respective callback method (e.g. `registerBlocks()`) which looks a bit cleaner and is guaranteed to run at a safe time.
+If you use the new `BalmModule` class, you can simply implement the respective callback method (e.g. `registerBlocks()`) which looks a bit cleaner and is guaranteed to run at a safe time.
 
 See the [modules](./modules.md) documentation for examples.
 
