@@ -4,12 +4,6 @@ sidebar_position: 3
 
 # Mod Configurations
 
-:::info[Minecraft 1.21.5: Declarative Configuration]
-The declarative approach of defining configurations is only available starting from Minecraft 1.21.5.
-
-However, the annotation-based approach is available in older versions too!
-:::
-
 ## Overview
 
 Balm provides a flexible configuration system that supports both declarative and annotation-based approaches.
@@ -223,9 +217,11 @@ While the Fabric runtime supports custom types as well, using them is not recomm
 :::
 
 :::warning[Configs may not be available in your initializer]
-On NeoForge, only configs of type `startup` are loaded instantly. That means you may not have access to your regular common config within your mod initializer.
+On Forge and NeoForge, configs are not loaded instantly. That means you will not have access to your common or client config within your mod initializer.
 
 You can listen to `ConfigLoadedEvent` to defer code until your config has been loaded (make sure to check if the schema is yours!).
+
+On NeoForge and Fabric, you can use a config of type `startup` which will be loaded immediately, but this is not supported on Forge.
 :::
 
 ## Supported Config Screen
