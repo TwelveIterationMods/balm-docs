@@ -106,7 +106,7 @@ Also note that Forge uses the `MixinConfigs` manifest attribute to define mixin 
 public class ForgeWaystones {
     final var loadContext = new ForgeLoadContext(context.getModEventBus());
     // Using a BalmClientModule
-    Balm.initializeMod(Waystones.MOD_ID, EmptyLoadContext.INSTANCE, new Waystones());
+    Balm.initializeMod(Waystones.MOD_ID, loadContext, new Waystones());
     // or using a static initializer method
     // Balm.initialize(Waystones.MOD_ID, loadContext, Waystones::initialize);
     if (FMLEnvironment.dist.isClient()) {
