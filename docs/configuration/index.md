@@ -248,4 +248,4 @@ Balm supports the following property types:
 - `List<any of the above>`
 - `Set<any of the above>`
 
-If you need property types beyond these, there's a good chance your use case would be better solved through a data pack.
+If you need property types beyond these, or lists of complex objects, there's a good chance your use case would be better solved through a data pack or custom JSON files.
