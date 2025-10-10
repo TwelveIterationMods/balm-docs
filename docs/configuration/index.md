@@ -219,7 +219,7 @@ While the Fabric runtime supports custom types as well, using them is not recomm
 :::warning[Configs may not be available in your initializer]
 On Forge and NeoForge, configs are not loaded instantly. That means you will not have access to your common or client config within your mod initializer.
 
-You can listen to `ConfigLoadedEvent` to defer code until your config has been loaded (make sure to check if the schema is yours!).
+You can use `Balm.getConfig().onConfigAvailable` to defer code until your config has been loaded.
 
 On NeoForge and Fabric, you can use a config of type `startup` which will be loaded immediately, but this is not supported on Forge.
 :::
