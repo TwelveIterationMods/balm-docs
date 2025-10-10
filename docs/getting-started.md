@@ -52,24 +52,55 @@ This example includes Kuma too, which is a library embedded in Balm to allow for
 :::
 
 ```groovy
-implementation("net.blay09.mods:kuma-api-common:${kuma_version}")
-implementation("net.blay09.mods:balm-common:${balm_version}") {
-    changing = balm_version.endsWith("SNAPSHOT")
+repositories {
+    maven {
+        url "https://maven.twelveiterations.com/repository/maven-public/"
+        content {
+            includeGroup "net.blay09.mods"
+        }
+    }
+}
+
+dependencies {
+    implementation("net.blay09.mods:kuma-api-common:${kuma_version}")
+    implementation("net.blay09.mods:balm-common:${balm_version}") {
+        changing = balm_version.endsWith("SNAPSHOT")
+    }
 }
 ```
 
 #### Add Balm to your Fabric Project
 
 ```groovy
-modImplementation("net.blay09.mods:kuma-api-fabric:${kuma_version}")
-modImplementation("net.blay09.mods:balm-fabric:${balm_version}") {
-    changing = balm_version.contains("SNAPSHOT")
+repositories {
+    maven {
+        url "https://maven.twelveiterations.com/repository/maven-public/"
+        content {
+            includeGroup "net.blay09.mods"
+        }
+    }
+}
+
+dependencies {
+    modImplementation("net.blay09.mods:kuma-api-fabric:${kuma_version}")
+    modImplementation("net.blay09.mods:balm-fabric:${balm_version}") {
+        changing = balm_version.contains("SNAPSHOT")
+    }
 }
 ```
 
 #### Add Balm to your NeoForge Project
 
 ```groovy
+repositories {
+    maven {
+        url "https://maven.twelveiterations.com/repository/maven-public/"
+        content {
+            includeGroup "net.blay09.mods"
+        }
+    }
+}
+
 dependencies {
     implementation("net.blay09.mods:kuma-api-neoforge:${kuma_version}")
     implementation("net.blay09.mods:balm-neoforge:${balm_version}") {
@@ -81,6 +112,15 @@ dependencies {
 #### Add Balm to your Forge Project
 
 ```groovy
+repositories {
+    maven {
+        url "https://maven.twelveiterations.com/repository/maven-public/"
+        content {
+            includeGroup "net.blay09.mods"
+        }
+    }
+}
+
 dependencies {
     implementation("net.blay09.mods:kuma-api-forge:${kuma_version}")
     implementation("net.blay09.mods:balm-forge:${balm_version}") {
