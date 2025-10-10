@@ -32,7 +32,7 @@ If you use the new `BalmModule` class, you can simply implement the respective c
 
 See the [modules](./modules.md) documentation for examples.
 
-### Accessing the Balm Runtime safely
+### Accessing the Balm Runtime safely as a non-Balm mod
 
 Third Party Mods, and in some circumstances Balm mods as well, should take care not to access the Balm runtime outside of the regular mod lifecycle. 
 
