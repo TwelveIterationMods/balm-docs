@@ -105,7 +105,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/VAfZ2Nau6j',
+              href: 'https://discord.gg/36qHFMNgAh',
             },
             {
               label: 'Bluesky',
