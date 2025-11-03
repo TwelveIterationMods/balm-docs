@@ -1,9 +1,9 @@
 ---
 title: Items
-sidebar_position: 2
+sidebar_position: 20
 ---
 
-# Registering Items
+## Registering Items
 
 Items can be registered using a `BalmItemFactory`.
 

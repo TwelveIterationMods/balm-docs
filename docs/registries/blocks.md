@@ -1,9 +1,9 @@
 ---
 title: Blocks
-sidebar_position: 1
+sidebar_position: 10
 ---
 
-# Registering Blocks
+## Registering Blocks
 
 Blocks can be registered using a `BalmBlockFactory`.
 
