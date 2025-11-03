@@ -5,7 +5,7 @@ sidebar_position: 50
 
 ## Registering Recipe Types
 
-Recipe types and their related classes can be registered using a `BalmRecipeTypeFactory`.
+Recipe types and their related classes can be registered using a `BalmRecipeTypeRegistrar`.
 
 ```java
 public class ModRecipeTypes {
@@ -22,7 +22,7 @@ public class ModRecipeTypes {
 }
 ```
 
-You can obtain a BalmRecipeTypeFactory either through `Balm.recipeTypes(MOD_ID, ModRecipeTypes::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmRecipeTypeRegistrar either through `Balm.recipeTypes(MOD_ID, ModRecipeTypes::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -42,7 +42,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerRecipeTypes(BalmRecipeTypeFactory recipeTypes) {
+    public void registerRecipeTypes(BalmRecipeTypeRegistrar recipeTypes) {
         ModRecipeTypes.initialize(recipeTypes);
     }
 

@@ -5,21 +5,21 @@ sidebar_position: 22
 
 ## Registering Data Components
 
-Data components can be registered using a `BalmDataComponentTypeFactory`.
+Data components can be registered using a `BalmDataComponentTypeRegistrar`.
 
 ```java
 public class ModDataComponents {
 
     public static Holder<DataComponentType<Unit>> yourDataComponent;
 
-    public static void initialize(BalmDataComponentTypeFactory dataComponentTypes) {
+    public static void initialize(BalmDataComponentTypeRegistrar dataComponentTypes) {
         yourDataComponent = dataComponentTypes.register("your_data_component", Codec.unit(Unit.INSTANCE)).asHolder();
     }
 
 }
 ```
 
-You can obtain a BalmDataComponentTypeFactory either through `Balm.dataComponentTypes(MOD_ID, ModDataComponents::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmDataComponentTypeRegistrar either through `Balm.dataComponentTypes(MOD_ID, ModDataComponents::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -39,7 +39,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerDataComponents(BalmDataComponentTypeFactory dataComponentTypes) {
+    public void registerDataComponents(BalmDataComponentTypeRegistrar dataComponentTypes) {
         ModDataComponents.initialize(dataComponentTypes);
     }
 

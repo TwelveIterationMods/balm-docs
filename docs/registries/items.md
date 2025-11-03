@@ -5,20 +5,20 @@ sidebar_position: 20
 
 ## Registering Items
 
-Items can be registered using a `BalmItemFactory`.
+Items can be registered using a `BalmItemRegistrar`.
 
 ```java
 public class ModItems {
 
     public static DeferredItem yourItem;
 
-    public static void initialize(BalmItemFactory items) {
+    public static void initialize(BalmItemRegistrar items) {
         yourItem = items.register("your_item", YourItem::new).asDeferredItem();
     }
 }
 ```
 
-You can obtain a BalmItemFactory either through `Balm.items(MOD_ID, ModItems::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmItemRegistrar either through `Balm.items(MOD_ID, ModItems::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -38,7 +38,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerItems(BalmItemFactory items) {
+    public void registerItems(BalmItemRegistrar items) {
         ModItems.initialize(items);
     }
 

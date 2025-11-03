@@ -5,14 +5,14 @@ sidebar_position: 10
 
 ## Registering Blocks
 
-Blocks can be registered using a `BalmBlockFactory`.
+Blocks can be registered using a `BalmBlockRegistrar`.
 
 ```java
 public class ModBlocks {
 
     public static DeferredBlock yourBlock;
 
-    public static void initialize(BalmBlockFactory blocks) {
+    public static void initialize(BalmBlockRegistrar blocks) {
         yourBlock = blocks.register("your_block", YourBlock::new, it -> it.sound(SoundType.WOOD).strength(2.5f))
             .withDefaultItem()
             .asDeferredBlock();
@@ -20,7 +20,7 @@ public class ModBlocks {
 }
 ```
 
-You can obtain a BalmBlockFactory either through `Balm.blocks(MOD_ID, ModBlocks::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmBlockRegistrar either through `Balm.blocks(MOD_ID, ModBlocks::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -40,7 +40,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerBlocks(BalmBlockFactory blocks) {
+    public void registerBlocks(BalmBlockRegistrar blocks) {
         ModBlocks.initialize(blocks);
     }
 
@@ -58,7 +58,7 @@ public class ModBlocks {
 
     public static DeferredBlock yourBlock;
 
-    public static void initialize(BalmBlockFactory blocks) {
+    public static void initialize(BalmBlockRegistrar blocks) {
         yourBlock = blocks.register("your_block", YourBlock::new, it -> it.sound(SoundType.WOOD).strength(2.5f))
             .withItem(YourBlockItem::new)
             .asDeferredBlock();
@@ -75,7 +75,7 @@ public class ModBlocks {
 
     public static DiscriminatedBlocks<DyeColor> ovens;
 
-    public static void initialize(BalmBlockFactory blocks) {
+    public static void initialize(BalmBlockRegistrar blocks) {
         ovens = blocks.registerDiscriminated(DyeColor.values(),
                         it -> DiscriminatedBlocks.prefix(it, "oven"),
                         OvenBlock::new,

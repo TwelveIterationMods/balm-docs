@@ -5,20 +5,20 @@ sidebar_position: 11
 
 ## Registering Block Entities
 
-Block entities can be registered using a `BalmBlockEntityFactory`.
+Block entities can be registered using a `BalmBlockEntityRegistrar`.
 
 ```java
 public class ModBlockEntities {
 
     public static Holder<BlockEntityType<YourBlockEntity>> yourBlockEntity;
 
-    public static void initialize(BalmBlockEntityFactory blockEntities) {
+    public static void initialize(BalmBlockEntityRegistrar blockEntities) {
         yourBlockEntity = blockEntities.register("your_block_entity", YourBlockEntity::new, ModBlocks.yourBlock).asHolder();
     }
 }
 ```
 
-You can obtain a BalmBlockEntityFactory either through `Balm.blockEntities(MOD_ID, ModBlockEntities::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmBlockEntityRegistrar either through `Balm.blockEntities(MOD_ID, ModBlockEntities::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -38,7 +38,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerBlockEntities(BalmBlockEntityFactory blockEntities) {
+    public void registerBlockEntities(BalmBlockEntityRegistrar blockEntities) {
         ModBlockEntities.initialize(blockEntities);
     }
 

@@ -5,12 +5,12 @@ sidebar_position: 21
 
 ## Registering Creative Mode Tabs
 
-Creative mode tabs can be registered using a `BalmCreativeModeTabFactory`.
+Creative mode tabs can be registered using a `BalmCreativeModeTabRegistrar`.
 
 ```java
 public class ModCreativeModeTabs {
 
-    public static void initialize(BalmCreativeModeTabFactory creativeModeTabs) {
+    public static void initialize(BalmCreativeModeTabRegistrar creativeModeTabs) {
         creativeModeTabs.register("your_creative_mode_tab", builder ->
             builder.title(Component.translatable("itemGroup.your_mod.your_creative_mode_tab"))
                 .icon(() -> ModItems.yourItem.createStack())
@@ -23,7 +23,7 @@ public class ModCreativeModeTabs {
 }
 ```
 
-You can obtain a BalmCreativeModeTabFactory either through `Balm.creativeModeTabs(MOD_ID, ModCreativeModeTabs::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmCreativeModeTabRegistrar either through `Balm.creativeModeTabs(MOD_ID, ModCreativeModeTabs::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -43,7 +43,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerCreativeModeTabs(BalmCreativeModeTabFactory creativeModeTabs) {
+    public void registerCreativeModeTabs(BalmCreativeModeTabRegistrar creativeModeTabs) {
         ModCreativeModeTabs.initialize(creativeModeTabs);
     }
 

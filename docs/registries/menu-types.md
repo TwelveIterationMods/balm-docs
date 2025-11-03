@@ -5,14 +5,14 @@ sidebar_position: 30
 
 ## Registering Menu Types
 
-Menu types can be registered using a `BalmMenuTypeFactory`.
+Menu types can be registered using a `BalmMenuTypeRegistrar`.
 
 ```java
 public class ModMenuTypes {
 
     public static Holder<MenuType<YourMenu>> yourMenuType;
 
-    public static void initialize(BalmMenuTypeFactory menuTypes) {
+    public static void initialize(BalmMenuTypeRegistrar menuTypes) {
         yourMenuType = menuTypes.register("your_menu_type", new BalmMenuFactory<YourMenu, YourMenu.Data>() {
             @Override
             public YourMenu create(int syncId, Inventory inventory, YourMenu.Data data) {
@@ -29,7 +29,7 @@ public class ModMenuTypes {
 }
 ```
 
-You can obtain a BalmMenuTypeFactory either through `Balm.menuTypes(MOD_ID, ModMenuTypes::initialize)` or by registering your mod as a `BalmModule`.
+You can obtain a BalmMenuTypeRegistrar either through `Balm.menuTypes(MOD_ID, ModMenuTypes::initialize)` or by registering your mod as a `BalmModule`.
 
 #### Using an Initializer
 
@@ -49,7 +49,7 @@ public class YourMod {
 public class YourMod implements BalmModule {
 
     @Override
-    public void registerMenuTypes(BalmMenuTypeFactory menuTypes) {
+    public void registerMenuTypes(BalmMenuTypeRegistrar menuTypes) {
         ModMenuTypes.initialize(menuTypes);
     }
 
