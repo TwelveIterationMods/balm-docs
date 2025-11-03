@@ -46,7 +46,7 @@ public class YourMod implements BalmModule {
 }
 ```
 
-## Custom BlockItems
+## Custom Block Items
 
 When using `withDefaultItem`, Balm will automatically register an item for your block based on the `BlockItem` class.
 
