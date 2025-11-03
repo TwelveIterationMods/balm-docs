@@ -1,5 +1,6 @@
 ---
 title: Blocks
+sidebar_position: 1
 ---
 
 # Registering Blocks

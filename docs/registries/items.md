@@ -1,5 +1,6 @@
 ---
 title: Items
+sidebar_position: 2
 ---
 
 # Registering Items
