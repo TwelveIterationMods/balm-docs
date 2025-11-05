@@ -80,7 +80,7 @@ public class ModBlocks {
                         it -> DiscriminatedBlocks.prefix(it, "oven"),
                         OvenBlock::new,
                         it -> it.sound(SoundType.METAL).strength(5f, 10f))
-                .forEach(it -> it.withDefaultItem())
+                .withDefaultItems()
                 .asDiscriminatedBlocks();
     }
 }

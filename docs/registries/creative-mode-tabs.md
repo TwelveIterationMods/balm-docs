@@ -1,6 +1,6 @@
 ---
 title: Creative Mode Tabs
-sidebar_position: 21
+sidebar_position: 22
 ---
 
 ## Registering Creative Mode Tabs

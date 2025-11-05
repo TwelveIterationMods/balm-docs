@@ -1,6 +1,6 @@
 ---
 title: Data Components
-sidebar_position: 22
+sidebar_position: 21
 ---
 
 ## Registering Data Components
