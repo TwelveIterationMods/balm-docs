@@ -1,0 +1,31 @@
+---
+slug: registry-refactor
+title: Balm 21.10.7 - Registry Refactor
+authors: [blaytheninth]
+tags: []
+---
+
+## Balm 21.10.7 - Registry Refactor
+
+I just released the first ever major refactor of Balm, targetting all registry-related methods to redesign them in a cleaner, more stable way.
+
+This version is backwards-compatible, and deprecated methods are scheduled to be removed in 1.21.11.
+
+{/* truncate */}
+
+- Initializers now receive a `BalmRegistrars` class, Balm modules now receive various `Balm{...}Registrar` classes in their callbacks
+- Registration with BalmRegistrars happen at Balm's choosing - that way, Balm can hook your registrations up to the appropriate mod loader events directly instead of having to store and translate them later
+- This design also prevents modders from easily making mistakes by accessing values too early or registering things too late
+    - For example, constructing Item.Properties could lead to issues in the past when referencing data components, because on Neo/Forge they were only available at deferred registration time, not during initialization
+    - For another example, accessing `ModMenus.myMenu::get` or similar in client-side screen or renderer registrations used to lead to crashes on NeoForge because `@Mod`s with `Dist.CLIENT` would initialize simultaneously and client-side registration calls would run before the common side had fully initialized
+- The style of these methods also matches Vanilla's registration closer, adapted to the needs of deferred registration imposed by Neo/Forge
+- Registrations look a lot prettier now in general (to see these changes in action, check out [this commit](<https://github.com/TwelveIterationMods/CookingForBlockheads/commit/55b16acfa30c7f6f7b131fb3008c03b5e40d1a8f>) or this [commit using BalmModule](<https://github.com/TwelveIterationMods/Waystones/commit/1ace8422918a7bcd47ddb4e9b5e4f23d55cfe82d>))
+
+There are two more refactors with larger impact planned:
+
+- Event Overhaul: Balm will be switching its event system to an event mapping system. This means instead of having a bus itself, it will translate listeners into modloader event buses directly.
+- Package Restructure (1.21.11): With the goal of staying close to Vanilla code design and making relevant code easier to discover, Balm is adopting Vanilla's package structure. This means your imports will have to be renamed in 1.21.11.
+
+:::tip
+There is some other cool new features in this release as well, such as [Declarative Quick Move](./utilities/quick-move.md), progress renderer utilities, a safe-to-access `isShiftDown` for tooltips [and other minor things](https://github.com/TwelveIterationMods/Balm/blob/d1fc837bf136e157df607d4fd301f1385043701b/CHANGELOG.md).
+:::
