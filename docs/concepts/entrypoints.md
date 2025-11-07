@@ -8,6 +8,10 @@ If you use the [balm-mod template repository](https://github.com/TwelveIteration
 
 If you use [Jared's MultiLoader](https://github.com/jaredlll08/MultiLoader-Template) template, you need to add the calls to `Balm.initializeMod()` so that your mod is registered with Balm.
 
+In most cases, you need to do the same for the client using `BalmClient.initializeMod` as well.
+
+If you are making a client-side only mod, it is still recommended to call both `Balm.initializeMod` and `BalmClient.initializeMod`, as the common initializer will setup some events that run on both client and server.
+
 ## NeoForge
 
 ### neoforge.mods.toml

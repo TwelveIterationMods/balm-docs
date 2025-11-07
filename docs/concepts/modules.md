@@ -8,7 +8,7 @@ Instead of a static initializer method that accesses the various Balm services, 
 
 You can use multiple modules to organize your code into functional or logical groups.
 
-Modules are optional - you can continue to simply access the Balm services directly using the `Balm` class in your initializer.
+Modules are optional - you can continue to simply access the Balm services directly using a static initializer and the `BalmRegistrars` class.
 
 ## Defining a module
 

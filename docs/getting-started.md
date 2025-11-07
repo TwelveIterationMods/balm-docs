@@ -21,7 +21,7 @@ Most of the MultiLoader magic, which is just setting up a few sub-projects and s
 
 Balm only comes in to provide API wrappers to let you interact with mod loaders from within your common code.
 
-### Using the Balm Mod Template
+### Using the Balm Mod Template (recommended)
 
 Click `Use this template` on the [balm-mod](https://github.com/TwelveIterationMods/balm-mod) repository to create a copy of the template repository.
 
@@ -35,15 +35,17 @@ In the future I would like to have a project generator so you don't have to manu
 
 ### Using Jared's MultiLoader Template
 
-You may as well just use the Balm Mod Template which is based on and closely resembles the MultiLoader Template.
+Balm's Mod Template is based on and closely resembles Jared's MultiLoader Template.
 
-If you're already on the MultiLoader Template, simply follow the steps below in `Adding Balm to an Existing Project`.
+If you're are currently using Jared's MultiLoader Template, follow the steps below in `Adding Balm to an Existing Project`.
 
-### Adding Balm to an Existing Project
+### Using your own Gradle Setup
 
-Ultimately, you need to create a gradle setup that includes a `common` project for your shared code, and another project for each mod loader you want to support. Your mod loader projects need to depend on the common project and include the common code when building their jar.
+If you want to use your own gradle setup instead of one of the above templates, you need to create a gradle setup that includes a `common` project for your shared code, and another project for each mod loader you want to support. Your mod loader projects need to depend on the common project and include the common code when building their jar. Then, follow the steps below in `Adding Balm to an Existing Project`.
 
 The mod templates above already come with a gradle setup that covers all of this, so I recommend either using them as a base or reference to adapt your project.
+
+### Adding Balm to an Existing Project
 
 #### Add Balm to your Common Project
 
@@ -142,5 +144,19 @@ public class FabricTrashSlot implements ModInitializer {
 }
 ```
 
+```java
+@Mod(TrashSlot.MOD_ID)
+public class NeoForgeTrashSlot {
+    public NeoForgeTrashSlot(IEventBus modEventBus) {
+        Balm.initializeMod(TrashSlot.MOD_ID, new NeoForgeLoadContext(modEventBus), new TrashSlot());
+    }
+}
+```
+
+In most cases, you need to do the same for the client using `BalmClient.initializeMod` as well.
+
+If you are making a client-side only mod, it is still recommended to call both `Balm.initializeMod` and `BalmClient.initializeMod`, as the common initializer will setup some events that run on both client and server.
+
 For more information on this part, check the documentation on [entrypoints](./concepts/entrypoints.md).
 
+Once everything is setup, you can get started by [registering content](./registries/blocks.md) or adding event handlers via `Balm.getEvents()`.
