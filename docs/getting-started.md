@@ -56,9 +56,9 @@ This example includes Kuma too, which is a library embedded in Balm to allow for
 ```groovy
 repositories {
     maven {
-        url "https://maven.twelveiterations.com/repository/maven-public/"
+        url = 'https://maven.twelveiterations.com/repository/maven-public/'
         content {
-            includeGroup "net.blay09.mods"
+            includeGroup 'net.blay09.mods'
         }
     }
 }
@@ -66,7 +66,7 @@ repositories {
 dependencies {
     implementation("net.blay09.mods:kuma-api-common:${kuma_version}")
     implementation("net.blay09.mods:balm-common:${balm_version}") {
-        changing = balm_version.endsWith("SNAPSHOT")
+        changing = balm_version.endsWith('SNAPSHOT')
     }
 }
 ```
@@ -76,9 +76,9 @@ dependencies {
 ```groovy
 repositories {
     maven {
-        url "https://maven.twelveiterations.com/repository/maven-public/"
+        url = 'https://maven.twelveiterations.com/repository/maven-public/'
         content {
-            includeGroup "net.blay09.mods"
+            includeGroup 'net.blay09.mods'
         }
     }
 }
@@ -86,7 +86,7 @@ repositories {
 dependencies {
     modImplementation("net.blay09.mods:kuma-api-fabric:${kuma_version}")
     modImplementation("net.blay09.mods:balm-fabric:${balm_version}") {
-        changing = balm_version.contains("SNAPSHOT")
+        changing = balm_version.contains('SNAPSHOT')
     }
 }
 ```
@@ -96,9 +96,9 @@ dependencies {
 ```groovy
 repositories {
     maven {
-        url "https://maven.twelveiterations.com/repository/maven-public/"
+        url = 'https://maven.twelveiterations.com/repository/maven-public/'
         content {
-            includeGroup "net.blay09.mods"
+            includeGroup 'net.blay09.mods'
         }
     }
 }
@@ -106,7 +106,7 @@ repositories {
 dependencies {
     implementation("net.blay09.mods:kuma-api-neoforge:${kuma_version}")
     implementation("net.blay09.mods:balm-neoforge:${balm_version}") {
-        changing = balm_version.contains("SNAPSHOT")
+        changing = balm_version.contains('SNAPSHOT')
     }
 }
 ```
@@ -116,9 +116,9 @@ dependencies {
 ```groovy
 repositories {
     maven {
-        url "https://maven.twelveiterations.com/repository/maven-public/"
+        url = 'https://maven.twelveiterations.com/repository/maven-public/'
         content {
-            includeGroup "net.blay09.mods"
+            includeGroup 'net.blay09.mods'
         }
     }
 }
@@ -126,7 +126,7 @@ repositories {
 dependencies {
     implementation("net.blay09.mods:kuma-api-forge:${kuma_version}")
     implementation("net.blay09.mods:balm-forge:${balm_version}") {
-        changing = balm_version.contains("SNAPSHOT")
+        changing = balm_version.contains('SNAPSHOT')
     }
 }
 ```
