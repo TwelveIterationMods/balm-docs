@@ -211,7 +211,7 @@ On Fabric, Balm manages local configs itself using a subset of the TOML format.
 The resulting TOML files are identical in both format and naming. However, Fabric uses the `StringRepresentable` of an enum for values while Neo/Forge use the enum's name (ignore-case).
 
 :::warning[Supported Config Types]
-Note that only the config types `common` and `client` are supported across all three mod loaders.
+Note that only the config types `common`, `client` and `server` are supported across all three mod loaders.
 
 While the Fabric runtime supports custom types as well, using them is not recommended unless you are building a mod exclusively for Fabric (they will crash on Neo/Forge).
 :::
