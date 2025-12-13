@@ -1,41 +1,31 @@
-# Website
+# Balm Developer Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+## Setup
 
-### Installation
+Make sure to install the dependencies:
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
+```bash
+pnpm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Development Server
 
-### Build
+Start the development server on `http://localhost:3000`:
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+pnpm dev
 ```
 
-Not using SSH:
+## Production
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+Build the application for production:
+
+```bash
+pnpm build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Locally preview production build:
+
+```bash
+pnpm preview
+```
