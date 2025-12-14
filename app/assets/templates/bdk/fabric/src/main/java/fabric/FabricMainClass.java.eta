@@ -1,0 +1,13 @@
+package <%= it.package %>.fabric;
+
+import net.blay09.mods.balm.Balm;
+import net.blay09.mods.balm.fabric.platform.runtime.FabricLoadContext;
+import net.fabricmc.api.ModInitializer;
+import <%= it.package %>.<%= it.mainClass %>;
+
+public class Fabric<%= it.mainClass %> implements ModInitializer {
+    @Override
+    public void onInitialize() {
+        Balm.initializeMod(<%= it.mainClass %>.MOD_ID, FabricLoadContext.INSTANCE, <%= it.mainClass %>::initialize);
+    }
+}

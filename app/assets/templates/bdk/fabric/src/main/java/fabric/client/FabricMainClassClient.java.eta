@@ -1,0 +1,14 @@
+package <%= it.package %>.fabric.client;
+
+import net.blay09.mods.balm.client.BalmClient;
+import net.blay09.mods.balm.fabric.platform.runtime.FabricLoadContext;
+import net.fabricmc.api.ClientModInitializer;
+import <%= it.package %>.<%= it.mainClass %>;
+import <%= it.package %>.client.<%= it.mainClass %>Client;
+
+public class Fabric<%= it.mainClass %>Client implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+        BalmClient.initializeMod(<%= it.mainClass %>.MOD_ID, FabricLoadContext.INSTANCE, <%= it.mainClass %>Client::initialize);
+    }
+}

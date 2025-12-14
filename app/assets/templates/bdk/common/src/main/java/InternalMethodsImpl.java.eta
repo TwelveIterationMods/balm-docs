@@ -1,0 +1,6 @@
+package <%= it.package %>;
+
+import <%= it.package %>.api.InternalMethods;
+
+public class InternalMethodsImpl implements InternalMethods {
+}

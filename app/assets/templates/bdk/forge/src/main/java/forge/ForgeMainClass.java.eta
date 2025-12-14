@@ -1,0 +1,22 @@
+package <%= it.package %>.forge;
+
+import net.blay09.mods.balm.api.Balm;
+import net.blay09.mods.balm.api.client.BalmClient;
+import net.blay09.mods.balm.forge.ForgeLoadContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
+import <%= it.package %>.<%= it.mainClass %>;
+
+@Mod(<%= it.mainClass %>.MOD_ID)
+public class Forge<%= it.mainClass %> {
+
+    public Forge<%= it.mainClass %>(FMLJavaModLoadingContext context) {
+        final var loadContext = new ForgeLoadContext(context.getModBusGroup());
+        Balm.initializeMod(<%= it.mainClass %>.MOD_ID, loadContext, <%= it.mainClass %>::initialize);
+        if (FMLEnvironment.dist.isClient()) {
+            BalmClient.initializeMod(<%= it.mainClass %>.MOD_ID, loadContext, <%= it.mainClass %>Client::initialize);
+        }
+    }
+
+}

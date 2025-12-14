@@ -41,11 +41,14 @@ importers:
       '@oxc-transform/binding-linux-x64-gnu':
         specifier: ^0.99.0
         version: 0.99.0
+      '@vueuse/core':
+        specifier: ^12.5.0
+        version: 12.8.2(typescript@5.9.3)
       better-sqlite3:
         specifier: ^12.4.6
         version: 12.5.0
       eta:
-        specifier: ^3.4.0
+        specifier: ^3.5.0
         version: 3.5.0
       jszip:
         specifier: ^3.10.1

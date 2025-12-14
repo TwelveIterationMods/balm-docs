@@ -1,0 +1,19 @@
+package <%= it.package %>.api;
+
+import java.lang.reflect.InvocationTargetException;
+
+public class <%= it.mainClass %>API {
+
+    public static final String MOD_ID = "<%= it.modId %>";
+
+    private static final InternalMethods __internalMethods;
+
+    static {
+        try {
+            __internalMethods = (InternalMethods) Class.forName("<%= it.package %>.InternalMethodsImpl").getConstructor().newInstance();
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}

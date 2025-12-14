@@ -1,0 +1,18 @@
+package <%= it.package %>.neoforge.client;
+
+import net.blay09.mods.balm.client.BalmClient;
+import net.blay09.mods.balm.neoforge.platform.runtime.NeoForgeLoadContext;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import <%= it.package %>.<%= it.mainClass %>;
+import <%= it.package %>.client.<%= it.mainClass %>Client;
+
+@Mod(value = <%= it.mainClass %>.MOD_ID, dist = Dist.CLIENT)
+public class NeoForge<%= it.mainClass %>Client {
+
+    public NeoForge<%= it.mainClass %>Client(IEventBus modEventBus) {
+        final var context = new NeoForgeLoadContext(modEventBus);
+        BalmClient.initializeMod(<%= it.mainClass %>.MOD_ID, context, <%= it.mainClass %>Client::initialize);
+    }
+}

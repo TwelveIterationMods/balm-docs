@@ -1,0 +1,33 @@
+package <%= it.package %>;
+
+import net.blay09.mods.balm.Balm;
+import net.blay09.mods.balm.core.BalmRegistrars;
+import net.minecraft.resources.Identifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import <%= it.package %>.block.ModBlocks;
+import <%= it.package %>.item.ModItems;
+
+public class <%= it.mainClass %> {
+
+    public static final Logger logger = LoggerFactory.getLogger(<%= it.mainClass %>.class);
+
+    public static final String MOD_ID = "<%= it.modId %>";
+
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    public static <%= it.mainClass %>Config config() {
+        return Balm.config().getActiveConfig(<%= it.mainClass %>Config.class);
+    }
+
+    public static void initialize(BalmRegistrars registrars) {
+        Balm.config().registerConfig(<%= it.mainClass %>Config.class);
+
+        registrars.blocks(ModBlocks::initialize);
+        registrars.items(ModItems::initialize);
+        registrars.creativeModeTabs(ModItems::initialize);
+    }
+
+}

@@ -1,0 +1,6 @@
+package <%= it.package %>.client;
+
+import <%= it.package %>.api.client.InternalClientMethods;
+
+public class InternalClientMethodsImpl implements InternalClientMethods {
+}
