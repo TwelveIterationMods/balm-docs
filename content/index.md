@@ -161,7 +161,7 @@ Mod Loader Abstractions
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Third Party Mod Integrations & Utilities
+Mod Integrations & Utilities
 
 #links
   :::u-button
