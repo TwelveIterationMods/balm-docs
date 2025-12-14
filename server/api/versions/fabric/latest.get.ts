@@ -1,16 +1,16 @@
-import getFabricVersion from "~~/server/utils/getFabricVersion";
+import getFabricVersion from '~~/server/utils/getFabricVersion'
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event);
-  const minecraft = query.minecraft as string;
+  const query = getQuery(event)
+  const minecraft = query.minecraft as string
   if (!minecraft || typeof minecraft !== 'string') {
-     throw createError({
+    throw createError({
       statusCode: 400,
-      statusMessage: 'minecraft should be a string',
+      statusMessage: 'minecraft should be a string'
     })
   }
 
   return {
-    version: await getFabricVersion(minecraft),
-  };
-});
+    version: await getFabricVersion(minecraft)
+  }
+})

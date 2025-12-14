@@ -1,6 +1,6 @@
-export default function(a: string, b: string) {
-  const aParts = a.split('.').map((p) => parseInt(p, 10) || 0)
-  const bParts = b.split('.').map((p) => parseInt(p, 10) || 0)
+export default function (a: string, b: string) {
+  const aParts = a.split('.').map(p => parseInt(p, 10) || 0)
+  const bParts = b.split('.').map(p => parseInt(p, 10) || 0)
 
   const maxLen = Math.max(aParts.length, bParts.length)
   for (let i = 0; i < maxLen; i++) {

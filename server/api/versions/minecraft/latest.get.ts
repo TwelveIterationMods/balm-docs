@@ -1,7 +1,7 @@
-import getLatestMinecraftVersion from "~~/server/utils/getLatestMinecraftVersion";
+import getLatestMinecraftVersion from '~~/server/utils/getLatestMinecraftVersion'
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   return {
-    version: await getLatestMinecraftVersion(),
-  };
-});
+    version: await getLatestMinecraftVersion()
+  }
+})

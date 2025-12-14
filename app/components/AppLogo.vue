@@ -6,16 +6,43 @@
     xmlns:bx="https://boxy-svg.com"
   >
     <defs>
-      <linearGradient id="gradient-1" bx:pinned="true">
-        <stop style="stop-color: rgb(255, 255, 255)" offset="0.242"></stop>
-        <stop style="" offset="1"></stop>
+      <linearGradient
+        id="gradient-1"
+        bx:pinned="true"
+      >
+        <stop
+          style="stop-color: rgb(255, 255, 255)"
+          offset="0.242"
+        />
+        <stop
+          style=""
+          offset="1"
+        />
       </linearGradient>
-      <linearGradient id="gradient-2" bx:pinned="true">
-        <stop offset="0" style="stop-color: rgb(255, 0, 0)"></stop>
-        <stop offset="0.246" style="stop-color: rgb(71, 129, 63)"></stop>
-        <stop offset="0.5" style="stop-color: rgb(63, 169, 0)"></stop>
-        <stop offset="0.749" style="stop-color: rgb(93, 190, 154)"></stop>
-        <stop offset="1" style="stop-color: rgb(190, 0, 255)"></stop>
+      <linearGradient
+        id="gradient-2"
+        bx:pinned="true"
+      >
+        <stop
+          offset="0"
+          style="stop-color: rgb(255, 0, 0)"
+        />
+        <stop
+          offset="0.246"
+          style="stop-color: rgb(71, 129, 63)"
+        />
+        <stop
+          offset="0.5"
+          style="stop-color: rgb(63, 169, 0)"
+        />
+        <stop
+          offset="0.749"
+          style="stop-color: rgb(93, 190, 154)"
+        />
+        <stop
+          offset="1"
+          style="stop-color: rgb(190, 0, 255)"
+        />
       </linearGradient>
       <linearGradient
         id="gradient-1-0"
@@ -26,7 +53,7 @@
         y2="416.069"
         gradientTransform="matrix(0.999998, 0.002011, -0.002007, 0.997993, 0.835534, 0.332204)"
         xlink:href="#gradient-1"
-      ></linearGradient>
+      />
       <linearGradient
         id="gradient-2-0"
         gradientUnits="userSpaceOnUse"
@@ -36,10 +63,19 @@
         y2="416.069"
         gradientTransform="matrix(0.009753, -0.999952, 0.885008, 0.008629, 24.64291, 418.512168)"
         xlink:href="#gradient-2"
-      ></linearGradient>
-      <linearGradient id="gradient-0" bx:pinned="true">
-        <stop offset="0" style="stop-color: rgb(197, 222, 45)"></stop>
-        <stop offset="1" style="stop-color: rgb(122, 123, 152)"></stop>
+      />
+      <linearGradient
+        id="gradient-0"
+        bx:pinned="true"
+      >
+        <stop
+          offset="0"
+          style="stop-color: rgb(197, 222, 45)"
+        />
+        <stop
+          offset="1"
+          style="stop-color: rgb(122, 123, 152)"
+        />
       </linearGradient>
       <linearGradient
         id="gradient-0-0"
@@ -50,7 +86,7 @@
         y2="416.213"
         gradientTransform="matrix(0.869127, -0.494588, 0.564797, 0.992503, -135.459077, 88.857798)"
         xlink:href="#gradient-0"
-      ></linearGradient>
+      />
       <linearGradient
         id="gradient-0-1"
         gradientUnits="userSpaceOnUse"
@@ -60,14 +96,29 @@
         y2="316.868"
         gradientTransform="matrix(0.999968, 0.008047, -0.008016, 0.995992, 32.119809, 0.158549)"
         xlink:href="#gradient-0"
-      ></linearGradient>
-      <linearGradient id="gradient-3" bx:pinned="true">
-        <stop offset="0" style="stop-color: rgb(255, 255, 255)"></stop>
-        <stop offset="1" style="stop-color: rgb(0, 77, 161)"></stop>
+      />
+      <linearGradient
+        id="gradient-3"
+        bx:pinned="true"
+      >
+        <stop
+          offset="0"
+          style="stop-color: rgb(255, 255, 255)"
+        />
+        <stop
+          offset="1"
+          style="stop-color: rgb(0, 77, 161)"
+        />
       </linearGradient>
       <linearGradient id="gradient-4">
-        <stop style="stop-color: rgb(255, 255, 255)" offset="0"></stop>
-        <stop style="stop-color: rgb(71, 85, 181)" offset="1"></stop>
+        <stop
+          style="stop-color: rgb(255, 255, 255)"
+          offset="0"
+        />
+        <stop
+          style="stop-color: rgb(71, 85, 181)"
+          offset="1"
+        />
       </linearGradient>
       <linearGradient
         id="gradient-3-0"
@@ -78,7 +129,7 @@
         y2="427.565"
         gradientTransform="matrix(-0.871743, -0.489963, 0.563779, -1.003073, 464.645504, 808.023482)"
         xlink:href="#gradient-3"
-      ></linearGradient>
+      />
       <linearGradient
         id="gradient-3-1"
         gradientUnits="userSpaceOnUse"
@@ -88,7 +139,7 @@
         y2="395.032"
         gradientTransform="matrix(-0.999991, 0.00444, -0.004451, -1.002684, 483.626515, 658.743266)"
         xlink:href="#gradient-3"
-      ></linearGradient>
+      />
       <linearGradient
         id="gradient-4-0"
         gradientUnits="userSpaceOnUse"
@@ -98,7 +149,7 @@
         y2="364.5"
         gradientTransform="matrix(0.76382, 0.645429, -0.419563, 0.496525, 155.367106, -56.385724)"
         xlink:href="#gradient-4"
-      ></linearGradient>
+      />
       <linearGradient
         id="gradient-4-1"
         gradientUnits="userSpaceOnUse"
@@ -108,7 +159,7 @@
         y2="364.487"
         gradientTransform="matrix(0.774727, -0.632297, 0.409392, 0.50161, -37.614479, 258.815139)"
         xlink:href="#gradient-4"
-      ></linearGradient>
+      />
     </defs>
     <path
       d="M 234.961 88.189 Q 250 79.673 265.039 88.189 L 385.351 156.32 Q 400.391 164.837 400.391 181.869 L 400.391 318.131 Q 400.391 335.164 385.351 343.68 L 265.039 411.811 Q 250 420.327 234.961 411.811 L 114.649 343.68 Q 99.609 335.164 99.609 318.131 L 99.609 181.869 Q 99.609 164.837 114.649 156.32 Z"

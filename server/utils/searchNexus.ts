@@ -1,25 +1,25 @@
-export default async function(
+export default async function (
   repository: string,
   groupId: string,
   artifactId?: string,
   version?: string
 ): Promise<
-    {
-      version: string
-      name: string
-      repository: string
-      assets: {
-        downloadUrl: string
-        fileSize: number
-        lastModified: string
-        maven2: {
-          extension: string
-          classifier?: string
-        }
-        contentType: string
-      }[]
+  {
+    version: string
+    name: string
+    repository: string
+    assets: {
+      downloadUrl: string
+      fileSize: number
+      lastModified: string
+      maven2: {
+        extension: string
+        classifier?: string
+      }
+      contentType: string
     }[]
-  > {
+  }[]
+> {
   const nexusUrl = 'https://maven.twelveiterations.com/service/rest/v1/search'
   const queryParams = new URLSearchParams({
     repository: repository,

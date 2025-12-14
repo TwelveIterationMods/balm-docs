@@ -1,5 +1,5 @@
-import getBalmMinecraftVersions from "~~/server/utils/getBalmMinecraftVersions";
+import getBalmMinecraftVersions from '~~/server/utils/getBalmMinecraftVersions'
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   return await getBalmMinecraftVersions()
 })

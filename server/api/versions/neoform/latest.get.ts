@@ -1,16 +1,16 @@
-import getNeoFormVersion from "~~/server/utils/getNeoFormVersion";
+import getNeoFormVersion from '~~/server/utils/getNeoFormVersion'
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event);
-  const minecraft = query.minecraft as string;
+  const query = getQuery(event)
+  const minecraft = query.minecraft as string
   if (!minecraft || typeof minecraft !== 'string') {
-     throw createError({
+    throw createError({
       statusCode: 400,
-      statusMessage: 'minecraft should be a string',
+      statusMessage: 'minecraft should be a string'
     })
   }
 
   return {
-    version: await getNeoFormVersion(minecraft),
-  };
-});
+    version: await getNeoFormVersion(minecraft)
+  }
+})

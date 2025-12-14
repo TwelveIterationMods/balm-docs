@@ -38,7 +38,10 @@ const { header } = useAppConfig()
       v-else
       #left
     >
-      <NuxtLink :to="header?.to || '/'" class="flex gap-2 text-lg font-bold">
+      <NuxtLink
+        :to="header?.to || '/'"
+        class="flex gap-2 text-lg font-bold"
+      >
         <AppLogo class="w-auto h-6 shrink-0" />
         Balm Developer Documentation
       </NuxtLink>
