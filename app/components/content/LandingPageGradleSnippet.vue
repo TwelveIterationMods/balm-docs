@@ -70,7 +70,7 @@ onMounted(() => {
   watchDebounced(minecraftVersion, async () => {
     const balm = await $fetch(`/api/versions/balm/latest?minecraft=${minecraftVersion.value}`)
     balmVersion.value = balm.version ?? '${balm_version}'
-  })
+  }, { immediate: true })
 })
 
 const effectiveCode = computed(() => {
