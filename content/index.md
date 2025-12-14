@@ -40,7 +40,7 @@ Use a single code base to release for NeoForge, Fabric and Forge.
   :::
 
 #default
-  :::prose-pre
+  :::landing-page-gradle-snippet
   ---
   code: |
     repositories {
@@ -67,7 +67,7 @@ Use a single code base to release for NeoForge, Fabric and Forge.
       }
     }
   }
-
+{{ $doc.uwu }}
   dependencies {
     implementation("net.blay09.mods:balm-common:${balm_version}")
   }
