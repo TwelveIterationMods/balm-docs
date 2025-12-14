@@ -55,7 +55,7 @@ const ui = computed(() =>
 );
 
 const { data: versions } = useLazyFetch<string[]>("/api/versions/minecraft/supported");
-const files = ['build.gradle', 'libs.versions.toml']
+const files = ['build.gradle', 'gradle.properties', 'libs.versions.toml']
 const file = ref('build.gradle')
 const minecraftVersion = ref('');
 const balmVersion = ref('${balm_version}')
@@ -82,6 +82,8 @@ balmCommon = { module = "net.blay09.mods:balm-common", version.ref = "balm" }
 balmNeoForge = { module = "net.blay09.mods:balm-neoforge", version.ref = "balm" }
 balmFabric = { module = "net.blay09.mods:balm-fabric", version.ref = "balm" }
 balmForge = { module = "net.blay09.mods:balm-forge", version.ref = "balm" }` + '\n```'
+    } else if(file.value === 'gradle.properties') {
+        return '```properties\n' + `balm_version = ${balmVersion.value}` + '\n```'
     }
 
     return '```groovy\n' + props.code?.replace('${balm_version}', balmVersion.value) + '\n```'
